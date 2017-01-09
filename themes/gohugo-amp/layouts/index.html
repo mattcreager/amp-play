@@ -1,0 +1,17 @@
+{{ partial "structure/head" . }}
+
+<main>
+    <h1>Creager-IO</h1>
+    <ul>
+      {{ range .Data.Pages.ByPublishDate }}
+        {{ if eq .Section "articles" }}
+          <li class="post-item">
+            <span class="meta">{{ .Date.Format .Site.Params.dateform }}</span>
+            <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+</main>
+
+{{ partial "structure/foot" . }}

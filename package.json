@@ -1,0 +1,25 @@
+{
+  "name": "creager-io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "hugo:server": "hugo server --buildDrafts --buildFuture",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:prod": "npm run theme:build && hugo && npm run optimize:html",
+    "optimize:html": "./node_modules/.bin/html-minifier --input-dir ./public/ --output-dir ./public/ --file-ext html -c ./html-minifier-config.json",
+    "theme:build": "node ./bin/render-styles",
+    "theme:watch": "./node_modules/.bin/nodemon -e scss -w ./ -x npm run theme:build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^6.6.1",
+    "cssnano": "^3.10.0",
+    "hack": "^0.7.7",
+    "html-minifier": "^3.2.3",
+    "node-sass": "^4.1.1",
+    "nodemon": "^1.11.0",
+    "postcss": "^5.2.8"
+  }
+}
