@@ -13,7 +13,7 @@ buildDrafts = true
 
     themeColor = "#112233" # define a theme color (this will colorize the android address-bar)
 
-    googleAnalytics = "UA-123456-78" # required if you want to use google analytics
+    #googleAnalytics = "UA-123456-78" # required if you want to use google analytics
 
     pageName = "Creager-IO"
     alternatePageName = "HUGO AMP" # alternative name for website structured data
